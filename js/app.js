@@ -45,8 +45,7 @@ function ejecutarMultiplicacion(){
     }else{
         resulta = multiplicacion(primero, segundo);
     document.getElementById("resultado").innerText = resulta;
-    } 
-    
+    }    
 }
 
 function ejecutarDivision(){
@@ -60,8 +59,7 @@ function ejecutarDivision(){
     }else{
         resulta = division(primero, segundo);
     document.getElementById("resultado").innerText = resulta;
-    } 
-    
+    }    
 }
 
 
