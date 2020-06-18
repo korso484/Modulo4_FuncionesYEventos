@@ -4,60 +4,56 @@ var resta = (op1, op2) => op1-op2;
 var multiplicacion = (op1, op2) => op1*op2;
 var division = (op1, op2) => op1/op2;
 
+
+//Funcion extraer inputs
+function getInput1(){
+    var primero = parseInt(document.getElementById("numero1").value); 
+    return primero;
+}
+
+function getInput2(){
+    var segundo = parseInt(document.getElementById("numero2").value); 
+    return segundo;
+}
+
 //funciones ejecutar operaciones
 function ejecutarSuma(){
-    var resulta;   
-    //obtener primer numero
-    var primero = parseInt(document.getElementById("numero1").value);  
-    //obetener segundo numero
-    var segundo = parseInt(document.getElementById("numero2").value);
-    if(isNaN(primero) || isNaN(segundo)){
+    var resulta; 
+    if(isNaN(getInput1()) || isNaN(getInput2())){
         document.getElementById("resultado").innerText = "Por favor introduzca dos números";
     }else{
-        resulta = suma(primero, segundo);
+        resulta = suma(getInput1(), getInput2());
         document.getElementById("resultado").innerText = resulta;
     }  
 }
 
 function ejecutarResta(){
     var resulta;
-    //obtener primer numero
-    var primero = parseInt(document.getElementById("numero1").value);  
-    //obetener segundo numero
-    var segundo = parseInt(document.getElementById("numero2").value);
-    if(isNaN(primero) || isNaN(segundo)){
+    if(isNaN(getInput1()) || isNaN(getInput2())){
         document.getElementById("resultado").innerText = "Por favor introduzca dos números";
     }else{
-        resulta = resta(primero, segundo);
-    document.getElementById("resultado").innerText = resulta;
+        resulta = resta(getInput1(), getInput2());
+        document.getElementById("resultado").innerText = resulta;
     } 
 }
     
 
 function ejecutarMultiplicacion(){
     var resulta;
-    //obtener primer numero
-    var primero = parseInt(document.getElementById("numero1").value);  
-    //obetener segundo numero
-    var segundo = parseInt(document.getElementById("numero2").value);
-    if(isNaN(primero) || isNaN(segundo)){
+    if(isNaN(getInput1()) || isNaN(getInput2())){
         document.getElementById("resultado").innerText = "Por favor introduzca dos números";
     }else{
-        resulta = multiplicacion(primero, segundo);
-    document.getElementById("resultado").innerText = resulta;
+        resulta = multiplicacion(getInput1(), getInput2());
+        document.getElementById("resultado").innerText = resulta;
     }    
 }
 
 function ejecutarDivision(){
     var resulta;
-    //obtener primer numero
-    var primero = parseInt(document.getElementById("numero1").value);  
-    //obetener segundo numero
-    var segundo = parseInt(document.getElementById("numero2").value);
-    if(isNaN(primero) || isNaN(segundo)){
+    if(isNaN(getInput1()) || isNaN(getInput2())){
         document.getElementById("resultado").innerText = "Por favor introduzca dos números";
     }else{
-        resulta = division(primero, segundo);
+        resulta = division(getInput1(), getInput2());
     document.getElementById("resultado").innerText = resulta;
     }    
 }
